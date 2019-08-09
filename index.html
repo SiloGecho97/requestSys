@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<!--
+* CoreUI - Free Bootstrap Admin Template
+* @version v2.1.15
+* @link https://coreui.io
+* Copyright (c) 2018 creativeLabs Łukasz Holeczek
+* Licensed under MIT (https://coreui.io/license)
+-->
+
+<html lang="en">
+  <head>
+    <base href="Public/">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
+    <meta name="author" content="Łukasz Holeczek">
+    <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
+    <title>AAiT Request Form</title>
+
+    
+    <!-- Icons-->
+    <link href="node_modules/@coreui/icons/css/coreui-icons.min.css" rel="stylesheet">
+    <link href="node_modules/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
+    <link href="node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="node_modules/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+    
+    <!-- Main styles for this application-->
+    <link href="/views/css/style.css" rel="stylesheet">
+    <link href="/views/vendors/pace-progress/css/pace.min.css" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics-->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-118965717-3"></script>
+
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> 
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> --> 
+      <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      // Shared ID
+      gtag('config', 'UA-118965717-3');
+      // Bootstrap ID
+      gtag('config', 'UA-118965717-5');
+    </script>
+
+  </head>
+  <body class="app header-fixed">
+    <header class="app-header navbar">
+      <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+        <span>AAiT Logo</span>
+      </a>
+      <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <ul class="nav navbar-nav d-md-down-none">
+        <li class="nav-item px-3">
+          <a class="nav-link" href="#">Request Form</a>
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link" href="#"></a>
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link" href="#"></a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav ml-auto">
+        <li class="nav-item d-md-down-none">
+          
+        </li>
+        <li class="nav-item d-md-down-none">
+          
+        </li>
+        <li class="nav-item d-md-down-none">
+         
+        </li>
+        <li class="nav-item dropdown">
+         
+        
+        </li>
+      </ul>
+      <button class="navbar-toggler aside-menu-toggler d-md-down-none" type="button" data-toggle="aside-menu-lg-show">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <button class="navbar-toggler aside-menu-toggler d-lg-none" type="button" data-toggle="aside-menu-show">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </header>
+    <div class="app-body" style="background-color: rgb(225, 227, 228);">
+      <main class="main">
+        <!-- Breadcrumb-->
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">Request Form</li>
+          <li class="breadcrumb-item">
+            <a href="#">Office</a>
+          </li>
+          <li class="breadcrumb-item active">Equipment</li>
+          <!-- Breadcrumb Menu-->
+          <li class="breadcrumb-menu d-md-down-none">
+            <div class="btn-group" role="group" aria-label="Button group">
+              
+             
+              <a class="btn" href="#">
+                <i class="icon-settings"></i> Request Form</a>
+            </div>
+          </li>
+        </ol>
+
+        <form action="/next" method="POST">
+        <div class="container-fluid">
+          <div class="animated fadeIn">
+            	<div class="row">
+                
+                  <div class="col-md-1"></div>
+                  <div class="col-md-9">
+    
+                  <div class="card">
+                      <div class="card-header">
+                        <strong>Request Form</strong>
+                        <small>Form</small>
+                      </div>
+                      <div class="card-body">
+
+                      
+                       <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group row">
+                                <label class="col-md-3 col-form-label" for="select1">Departemet</label>
+                                <div class="col-md-9">
+                                  <select class="form-control" id="select1" name="dept">
+                                    <option value="0">Please select</option>
+                                    <option value="1">Adminstration</option>
+                                    <option value="2">Registrar</option>
+                                    <option value="3">School of Civil and Enviromemtal Engineering</option>
+                                  </select>
+                                </div>
+                              </div>
+
+                        </div>
+
+                       </div>
+
+                            <!-- TABLE PART -->
+                      
+                      <hr>
+
+                      
+                      <div class="panel-group" id="accordion">
+                        <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <h4 class="panel-title">
+                              <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Desktops</a>
+                               
+
+                                <span class="badge badge-info">Desktops list</span>
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                                </button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i>
+                                </button>
+
+                              
+                               
+                             
+                            </h4>
+                          </div>
+                          <div id="collapse1" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                              <div class="table-responsive">
+                                  
+                                              <ul class="list-group">
+                                                        
+                                                  <li class="list-group-item-primary"><b>Desktops</b></li>
+                                                
+                                                </ul>
+                    
+                                                
+                                                <table id="mytable1" class="table table-responsive-sm table-hover table-bordered table-striped table-sm">
+                    
+                                                    
+                                                    <thead>
+                                                    
+                                                    <th><input type="checkbox" id="checkall" name="Desktop1"/></th>
+                                                    <th>Item Name</th>
+                                                    <th>Item description</th>
+                                                    <th>Model</th>
+                                                    <th>Brand</th>
+                                                    
+
+                                                    <th>More Detail</th>
+                                                    
+                                                    </thead>
+                                      <tbody>
+                                      
+                                    <tr>
+                                      <td><input type="checkbox" class="checkthis" name="Desktop2"/></td>
+                                      <td><script>var name = "<%= items %>";</script></td>
+                                      <td>Desktop Computer with core i5 for basic Office</td>
+                                      <td>290G2</td>
+                                      <td>HP</td>
+                                   
+                                      
+                                      <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-plus"> More Detail</span></button></p></td>
+                                    </tr>
+                                      
+                                    <tr>
+                                        <td><input type="checkbox" class="checkthis" name="Desktop3" /></td>
+                                        <td>Desktop</td>
+                                        <td>Desktop Computer with core i5 for basic Office</td>
+                                        <td>290G2</td>
+                                        <td>HP</td>
+                                     
+                                        
+                                        <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-plus"> More Detail</span></button></p></td>
+                                      </tr>
+                                      
+                                    
+                                    <tr>
+                                        <td><input type="checkbox" class="checkthis" name="Desktop4"/></td>
+                                        <td>Desktop</td>
+                                        <td>Desktop Computer with core i5 for basic Office</td>
+                                        <td>290G2</td>
+                                        <td>HP</td>
+                           
+                                        
+                                        <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-plus"> More Detail</span></button></p></td>
+                                      </tr>
+                                      
+                                      
+                                      
+                                      <tr>
+                                          <td><input type="checkbox" class="checkthis" name="Desktop5"/></td>
+                                          <td>Desktop</td>
+                                          <td>Desktop Computer with core i5 for basic Office</td>
+                                          <td>290G2</td>
+                                          <td>HP</td>
+                                      
+                                          <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-plus"> More Detail</span></button></p></td>
+                                        </tr>
+                                      
+                                      
+                                        <tr>
+                                            <td><input type="checkbox" class="checkthis" name="Desktop6" /></td>
+                                            <td>Desktop</td>
+                                            <td>Desktop Computer with core i5 for basic Office</td>
+                                            <td>290G2</td>
+                                            <td>HP</td>
+                                            
+                                            
+                                            <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-plus"> More Detail</span></button></p></td>
+                                          </tr>
+                    
+                                          <tr>
+                                              <td><input type="checkbox" class="checkthis" name="Desktop7" /></td>
+                                              <td>Desktop</td>
+                                              <td>Desktop Computer with core i5 for basic Office</td>
+                                              <td>290G2</td>
+                                              <td>HP</td>
+                                             
+                                              
+                                              <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-plus"> More Detail</span></button></p></td>
+                                            </tr>
+                                      
+                                    
+                                      
+                                    
+                                      
+                                      </tbody>
+                                          
+                                               </table>
+                                    
+                                        <div class="clearfix"></div>
+                                        <ul class="pagination">
+                                            <li class="page-item">
+                                              <a class="page-link" href="#">Prev</a>
+                                            </li>
+                                            <li class="page-item active">
+                                              <a class="page-link" href="#">1</a>
+                                            </li>
+                                            <li class="page-item">
+                                              <a class="page-link" href="#">2</a>
+                                            </li>
+                                            <li class="page-item">
+                                              <a class="page-link" href="#">3</a>
+                                            </li>
+                                            <li class="page-item">
+                                              <a class="page-link" href="#">4</a>
+                                            </li>
+                                            <li class="page-item">
+                                              <a class="page-link" href="#">Next</a>
+                                            </li>
+                                          </ul>
+                                       </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- laptop
+                         -->
+
+
+                        <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <h4 class="panel-title">
+                              <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Laptop</a>
+                            </h4>
+                          </div>
+                          <div id="collapse2" class="panel-collapse collapse">
+                            <div class="panel-body">
+                       
+
+      
+                            <ul class="list-group">
+                                          
+                                <li class="list-group-item-primary"><strong>Laptops</strong></li>
+                              
+                              </ul>
+                            <table id="mytable2" class="table table-responsive-sm table-hover table-bordered table-striped table-sm">
+      
+                                      
+                              <thead>
+                                                    
+                                <th><input type="checkbox" id="checkall" /></th>
+                                <th>Item Name</th>
+                                <th>Item description</th>
+                                <th>Model</th>
+                                <th>Brand</th>
+                                <th>More Detail</th>
+                                
+                                </thead>
+                  <tbody>
+                  
+                <tr>
+                  <td><input type="checkbox" class="checkthis" /></td>
+                  <td>Laptop</td>
+                  <td>Desktop Computer with core i5 for basic Office</td>
+                  <td>290G2</td>
+                  <td>HP</td>
+                 
+                  
+                  <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-plus"> More Detail</span></button></p></td>
+                </tr>
+                  
+                <tr>
+                    <td><input type="checkbox" class="checkthis" /></td>
+                    <td>Desktop</td>
+                    <td>Desktop Computer with core i5 for basic Office</td>
+                    <td>290G2</td>
+                    <td>HP</td>
+                   
+                    
+                    <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-plus"> More Detail</span></button></p></td>
+                  </tr>
+                  
+                
+                <tr>
+                    <td><input type="checkbox" class="checkthis" /></td>
+                    <td>Desktop</td>
+                    <td>Desktop Computer with core i5 for basic Office</td>
+                    <td>290G2</td>
+                    <td>HP</td>
+                   
+                    <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-plus"> More Detail</span></button></p></td>
+                  </tr>
+                  
+                  
+                  
+                  <tr>
+                      <td><input type="checkbox" class="checkthis" /></td>
+                      <td>Desktop</td>
+                      <td>Desktop Computer with core i5 for basic Office</td>
+                      <td>290G2</td>
+                      <td>HP</td>
+                     
+                      
+                      <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-plus"> More Detail</span></button></p></td>
+                    </tr>
+                  
+                  
+                    <tr>
+                        <td><input type="checkbox" class="checkthis" /></td>
+                        <td>Desktop</td>
+                        <td>Desktop Computer with core i5 for basic Office</td>
+                        <td>290G2</td>
+                        <td>HP</td>
+                      
+                        
+                        <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-plus"> More Detail</span></button></p></td>
+                      </tr>
+      
+                      <tr>
+                          <td><input type="checkbox" class="checkthis" /></td>
+                          <td>Desktop</td>
+                          <td>Desktop Computer with core i5 for basic Office</td>
+                          <td>290G2</td>
+                          <td>HP</td>
+                        
+                          <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-plus"> More Detail</span></button></p></td>
+                        </tr>
+                  
+                
+                  
+                
+                  
+                  </tbody>
+                      
+                           </table>
+                           <div class="clearfix"></div>
+                           <ul class="pagination">
+                               <li class="page-item">
+                                 <a class="page-link" href="#">Prev</a>
+                               </li>
+                               <li class="page-item active">
+                                 <a class="page-link" href="#">1</a>
+                               </li>
+                               <li class="page-item">
+                                 <a class="page-link" href="#">2</a>
+                               </li>
+                               <li class="page-item">
+                                 <a class="page-link" href="#">3</a>
+                               </li>
+                               <li class="page-item">
+                                 <a class="page-link" href="#">4</a>
+                               </li>
+                               <li class="page-item">
+                                 <a class="page-link" href="#">Next</a>
+                               </li>
+                           </ul>
+       
+                            </div>
+
+                            </div>
+                          
+                        </div>
+
+                        <!-- Hard Disk -->
+
+                        <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <h4 class="panel-title">
+                              <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Hard Disk</a>
+                            </h4>
+                          </div>
+                          <div id="collapse3" class="panel-collapse collapse">
+                            <div class="panel-body">
+                              <div class="table-responsive">
+
+                           <ul class="list-group">
+                                          
+                              <li class="list-group-item-primary"><strong>Hard Disk</strong></li>
+                            
+                            </ul>
+
+                          <table id="mytable3" class="table table-responsive-sm table-hover table-bordered table-striped table-sm">
+      
+                            <thead>
+                                                    
+                              <th><input type="checkbox" id="checkall" /></th>
+                              <th>Item Name</th>
+                              <th>Item description</th>
+                              <th>Model</th>
+                              <th>Brand</th>
+                              <th>More Detail</th>
+                              
+                              </thead>
+                              <tbody>
+                              
+                                  <tr>
+                                    <td><input type="checkbox" class="checkthis" /></td>
+                                    <td>1TB</td>
+                                    <td>1TB external Hard Disk </td>
+                                    <td>--</td>
+                                    <td>Toshiba</td>
+                                    
+                                    
+                                    <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-plus"><a href="">More Detail</a></span></button></p></td>
+                                  </tr>
+                                    
+                                  <tr>
+                                      <td><input type="checkbox" class="checkthis" /></td>
+                                      <td>2TB</td>
+                                      <td>Desktop Computer with core i5 for basic Office</td>
+                                      <td>290G2</td>
+                                      <td>HP</td>
+                                      
+                                      
+                                      <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-plus"> More Detail</span></button></p></td>
+                                    </tr>                
+                                    </tbody>
+                              
+                                  </table>
+                          
+      
+                            </div>
+
+                            </div>
+                          </div>
+                        </div>
+
+                      </div> 
+                    
+
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox"> Review the request closely
+                        </label>
+                      </div>
+
+                      <div>
+                        <div class="form-actions">
+                          <button class="btn btn-primary" type="submit">Next</button>
+                          <button class="btn btn-danger" type="button">Reset</button>
+                          <button class="btn btn-secondary" type="button">Cancel</button>
+                        </div>  
+                      </div>
+                </div>
+                
+                          
+                      </div>
+                      
+                  </div>
+
+                
+              </div>
+
+           </div>
+
+        </div>
+       </form>
+       
+      </main>
+      <aside class="aside-menu">
+       
+        <!-- Tab panes-->
+        
+      </aside>
+    </div>
+
+    
+    <footer class="app-footer">
+      <div>
+        <a href="https://coreui.io">AAiT</a>
+        <span>&copy; 2019 aait.edu.et.</span>
+      </div>
+      <div class="ml-auto">
+        <span>Powered by</span>
+        <a href="https://coreui.io">AAiT</a>
+      </div>
+    </footer>
+
+
+  
+
+<!-- Button trigger modal -->
+
+
+    <!-- CoreUI and necessary plugins-->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/pace-progress/pace.min.js"></script>
+    <script src="node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
+    <script src="node_modules/@coreui/coreui/dist/js/coreui.min.js"></script>
+  </body>
+</html>

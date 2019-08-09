@@ -1,0 +1,360 @@
+doctype html
+
+head
+ 
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0, shrink-to-fit=no')
+  meta(name='description' content='CoreUI - Open Source Bootstrap Admin Template')
+  meta(name='author' content='Łukasz Holeczek')
+  meta(name='keyword' content='Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard')
+  title AAiT Request Form
+  // Icons
+  link(href='node_modules/@coreui/icons/css/coreui-icons.min.css' rel='stylesheet')
+  link(href='node_modules/flag-icon-css/css/flag-icon.min.css' rel='stylesheet')
+  link(href='node_modules/font-awesome/css/font-awesome.min.css' rel='stylesheet')
+  link(href='node_modules/simple-line-icons/css/simple-line-icons.css' rel='stylesheet')
+  // Main styles for this application
+  link(href='/views/css/style.css' rel='stylesheet')
+  link(href='/views/vendors/pace-progress/css/pace.min.css' rel='stylesheet')
+  // Global site tag (gtag.js) - Google Analytics
+  script(async='' src='https://www.googletagmanager.com/gtag/js?id=UA-118965717-3')
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css')
+  //
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  script.
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+    dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    // Shared ID
+    gtag('config', 'UA-118965717-3');
+    // Bootstrap ID
+    gtag('config', 'UA-118965717-5');
+header.app-header.navbar
+  button.navbar-toggler.sidebar-toggler.d-lg-none.mr-auto(type='button' data-toggle='sidebar-show')
+    span.navbar-toggler-icon
+  a.navbar-brand(style='padding-left: 90px; padding-top:10px;' href='#') 
+    img.navbar-brand-full(src='/views/img/logo.png' alt='CoreUI Logo'  width='220' height='50')
+ 
+
+  button.navbar-toggler.sidebar-toggler.d-md-down-none(type='button' data-toggle='sidebar-lg-show')
+    span.navbar-toggler-icon
+  ul.nav.navbar-nav.d-md-down-none
+    li.nav-item.px-3
+      a.nav-link(href='#') Request Form
+    li.nav-item.px-3
+      a.nav-link(href='#')
+    li.nav-item.px-3
+      a.nav-link(href='#')
+  ul.nav.navbar-nav.ml-auto
+    li.nav-item.d-md-down-none
+    li.nav-item.d-md-down-none
+    li.nav-item.d-md-down-none
+    li.nav-item.dropdown
+  button.navbar-toggler.aside-menu-toggler.d-md-down-none(type='button' data-toggle='aside-menu-lg-show')
+    span.navbar-toggler-icon
+  button.navbar-toggler.aside-menu-toggler.d-lg-none(type='button' data-toggle='aside-menu-show')
+    span.navbar-toggler-icon
+.app-body(style='background-color: rgb(225, 227, 228);')
+  main.main
+    // Breadcrumb
+    ol.breadcrumb
+      li.breadcrumb-item Request Form
+      li.breadcrumb-item
+        a(href='#') Office
+      li.breadcrumb-item.active Equipment
+      // Breadcrumb Menu
+      li.breadcrumb-menu.d-md-down-none
+        .btn-group(role='group' aria-label='Button group')
+          a.btn(href='#')
+            i.icon-settings
+            |  Request Form
+    form(action='/next' method='POST')
+      .container-fluid
+        .animated.fadeIn
+          .row
+            .col-md-1
+            .col-md-9
+              .card
+                .card-header
+                  strong Request Form
+                  small Form
+                .card-body
+                  .row
+                   
+                  
+                  .row
+                    .col-sm-6
+                      .form-group.row
+                        label.col-md-3.col-form-label(for='select1') Departemet
+                        .col-md-9
+                          select#select1.form-control(name='dept')
+                            option(value='0') Please select
+                            option(value='1') Adminstration
+                            option(value='2') Registrar
+                            option(value='3') School of Civil and Enviromemtal Engineering
+                  // TABLE PART
+                  hr
+                  #accordion.panel-group
+                    .panel.panel-default
+                      .panel-heading
+                        h4.panel-title
+                          a(data-toggle='collapse' data-parent='#accordion' href='#collapse1') Desktops
+                          span.badge.badge-info Desktops list
+                          button.btn.btn-box-tool(type='button' data-widget='collapse')
+                            i.fa.fa-minus
+                          button.btn.btn-box-tool(type='button' data-widget='remove')
+                            i.fa.fa-times
+                      #collapse1.panel-collapse.collapse.in
+                        .panel-body
+                          .table-responsive
+                            ul.list-group
+                              li.list-group-item-primary
+                                b Desktops
+                            table#mytable1.table.table-responsive-sm.table-hover.table-bordered.table-striped.table-sm
+                              thead
+                                th
+                                  input#checkall(type='checkbox' name='Desktop1')
+                                th Item Name
+                                th Item description
+                                th Model
+                                th Brand
+                                th More Detail
+                              tbody
+                                tr
+                                  td
+                                    input.checkthis(type='checkbox' name='Desktop2')
+                                  td
+                                    script.
+                                      var name = "<%= items %>";
+                                  td Desktop Computer with core i5 for basic Office
+                                  td 290G2
+                                  td HP
+                                  td
+                                    p(data-placement='top' data-toggle='tooltip' title='Edit')
+                                      button.btn.btn-primary.btn-xs(data-title='Edit' data-toggle='modal' data-target='#edit')
+                                        span.glyphicon.glyphicon-plus  More Detail
+                                tr
+                                  td
+                                    input.checkthis(type='checkbox' name='Desktop3')
+                                  td Desktop
+                                  td Desktop Computer with core i5 for basic Office
+                                  td 290G2
+                                  td HP
+                                  td
+                                    p(data-placement='top' data-toggle='tooltip' title='Edit')
+                                      button.btn.btn-primary.btn-xs(data-title='Edit' data-toggle='modal' data-target='#edit')
+                                        span.glyphicon.glyphicon-plus  More Detail
+                                tr
+                                  td
+                                    input.checkthis(type='checkbox' name='Desktop4')
+                                  td Desktop
+                                  td Desktop Computer with core i5 for basic Office
+                                  td 290G2
+                                  td HP
+                                  td
+                                    p(data-placement='top' data-toggle='tooltip' title='Edit')
+                                      button.btn.btn-primary.btn-xs(data-title='Edit' data-toggle='modal' data-target='#edit')
+                                        span.glyphicon.glyphicon-plus  More Detail
+                               
+                            .clearfix
+                            ul.pagination
+                              li.page-item
+                                a.page-link(href='#') Prev
+                              li.page-item.active
+                                a.page-link(href='#') 1
+                              li.page-item
+                                a.page-link(href='#') 2
+                              li.page-item
+                                a.page-link(href='#') 3
+                              li.page-item
+                                a.page-link(href='#') 4
+                              li.page-item
+                                a.page-link(href='#') Next
+                    //
+                      laptop
+                    .panel.panel-default
+                      .panel-heading
+                        h4.panel-title
+                          a(data-toggle='collapse' data-parent='#accordion' href='#collapse2') Laptop
+                      #collapse2.panel-collapse.collapse
+                        .panel-body
+                          ul.list-group
+                            li.list-group-item-primary
+                              strong Laptops
+                          table#mytable2.table.table-responsive-sm.table-hover.table-bordered.table-striped.table-sm
+                            thead
+                              th
+                                input#checkall(type='checkbox')
+                              th Item Name
+                              th Item description
+                              th Model
+                              th Brand
+                              th More Detail
+                            tbody
+                              tr
+                                td
+                                  input.checkthis(type='checkbox')
+                                td Laptop
+                                td Desktop Computer with core i5 for basic Office
+                                td 290G2
+                                td HP
+                                td
+                                  p(data-placement='top' data-toggle='tooltip' title='Edit')
+                                    button.btn.btn-primary.btn-xs(data-title='Edit' data-toggle='modal' data-target='#edit')
+                                      span.glyphicon.glyphicon-plus  More Detail
+                              tr
+                                td
+                                  input.checkthis(type='checkbox')
+                                td Desktop
+                                td Desktop Computer with core i5 for basic Office
+                                td 290G2
+                                td HP
+                                td
+                                  p(data-placement='top' data-toggle='tooltip' title='Edit')
+                                    button.btn.btn-primary.btn-xs(data-title='Edit' data-toggle='modal' data-target='#edit')
+                                      span.glyphicon.glyphicon-plus  More Detail
+                              tr
+                                td
+                                  input.checkthis(type='checkbox')
+                                td Desktop
+                                td Desktop Computer with core i5 for basic Office
+                                td 290G2
+                                td HP
+                                td
+                                  p(data-placement='top' data-toggle='tooltip' title='Edit')
+                                    button.btn.btn-primary.btn-xs(data-title='Edit' data-toggle='modal' data-target='#edit')
+                                      span.glyphicon.glyphicon-plus  More Detail
+                              tr
+                                td
+                                  input.checkthis(type='checkbox')
+                                td Desktop
+                                td Desktop Computer with core i5 for basic Office
+                                td 290G2
+                                td HP
+                                td
+                                  p(data-placement='top' data-toggle='tooltip' title='Edit')
+                                    button.btn.btn-primary.btn-xs(data-title='Edit' data-toggle='modal' data-target='#edit')
+                                      span.glyphicon.glyphicon-plus  More Detail
+                              tr
+                                td
+                                  input.checkthis(type='checkbox')
+                                td Desktop
+                                td Desktop Computer with core i5 for basic Office
+                                td 290G2
+                                td HP
+                                td
+                                  p(data-placement='top' data-toggle='tooltip' title='Edit')
+                                    button.btn.btn-primary.btn-xs(data-title='Edit' data-toggle='modal' data-target='#edit')
+                                      span.glyphicon.glyphicon-plus  More Detail
+                              tr
+                                td
+                                  input.checkthis(type='checkbox')
+                                td Desktop
+                                td Desktop Computer with core i5 for basic Office
+                                td 290G2
+                                td HP
+                                td
+                                  p(data-placement='top' data-toggle='tooltip' title='Edit')
+                                    button.btn.btn-primary.btn-xs(data-title='Edit' data-toggle='modal' data-target='#edit')
+                                      span.glyphicon.glyphicon-plus  More Detail
+                          .clearfix
+                          ul.pagination
+                            li.page-item
+                              a.page-link(href='#') Prev
+                            li.page-item.active
+                              a.page-link(href='#') 1
+                            li.page-item
+                              a.page-link(href='#') 2
+                            li.page-item
+                              a.page-link(href='#') 3
+                            li.page-item
+                              a.page-link(href='#') 4
+                            li.page-item
+                              a.page-link(href='#') Next
+                    // Hard Disk
+                    .panel.panel-default
+                      .panel-heading
+                        h4.panel-title
+                          a(data-toggle='collapse' data-parent='#accordion' href='#collapse3') Hard Disk
+                      #collapse3.panel-collapse.collapse
+                        .panel-body
+                          .table-responsive
+                            ul.list-group
+                              li.list-group-item-primary
+                                strong Hard Disk
+                            table#mytable3.table.table-responsive-sm.table-hover.table-bordered.table-striped.table-sm
+                              thead
+                                th
+                                  input#checkall(type='checkbox')
+                                th Item Name
+                                th Item description
+                                th Model
+                                th Brand
+                                th More Detail
+                              tbody
+                                tr
+                                  td
+                                    input.checkthis(type='checkbox')
+                                  td 1TB
+                                  td 1TB external Hard Disk 
+                                  td --
+                                  td Toshiba
+                                  td
+                                    p(data-placement='top' data-toggle='tooltip' title='Edit')
+                                      button.btn.btn-primary.btn-xs(data-title='Edit' data-toggle='modal' data-target='#edit')
+                                        span.glyphicon.glyphicon-plus
+                                          a(href='') More Detail
+                                tr
+                                  td
+                                    input.checkthis(type='checkbox')
+                                  td 2TB
+                                  td Desktop Computer with core i5 for basic Office
+                                  td 290G2
+                                  td HP
+                                  td
+                                    p(data-placement='top' data-toggle='tooltip' title='Edit')
+                                      button.btn.btn-primary.btn-xs(data-title='Edit' data-toggle='modal' data-target='#edit')
+                                        span.glyphicon.glyphicon-plus  More Detail
+                  .checkbox
+                    label
+                      input(type='checkbox')
+                      |  Review the request closely
+                  div
+                    .form-actions
+                      button.btn.btn-primary(type='submit') Next
+                      button.btn.btn-danger(type='button') Reset
+                      button.btn.btn-secondary(type='button') Cancel
+  aside.aside-menu
+    // Tab panes
+footer.app-footer
+  div
+    a(href='https://coreui.io') AAiT
+    span &copy; 2019 aait.edu.et.
+  .ml-auto
+    span Powered by
+    a(href='https://coreui.io') AAiT
+// Button trigger modal
+// Modal
+#exampleModalCenter.modal.fade(tabindex='-1' role='dialog' aria-labelledby='exampleModalCenterTitle' aria-hidden='true')
+  .modal-dialog.modal-dialog-centered(role='document')
+    .modal-content
+      .modal-header
+        h5#exampleModalLongTitle.modal-title Modal title
+        button.close(type='button' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body
+        | ...
+      .modal-footer
+        button.btn.btn-secondary(type='button' data-dismiss='modal') Close
+        button.btn.btn-primary(type='button') Save changes
+// CoreUI and necessary plugins
+script(src='node_modules/jquery/dist/jquery.min.js')
+script(src='node_modules/popper.js/dist/umd/popper.min.js')
+script(src='node_modules/bootstrap/dist/js/bootstrap.min.js')
+script(src='node_modules/pace-progress/pace.min.js')
+script(src='node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js')
+script(src='node_modules/@coreui/coreui/dist/js/coreui.min.js')
