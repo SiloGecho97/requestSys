@@ -64,7 +64,7 @@ header.app-header.navbar
     ol.breadcrumb
       li.breadcrumb-item Request Form
       li.breadcrumb-item
-        a(href='#') Office
+        a(href='/addItem') Office
       li.breadcrumb-item.active Equipment
       // Breadcrumb Menu
       li.breadcrumb-menu.d-md-down-none
@@ -84,7 +84,8 @@ header.app-header.navbar
                   small Form
                 .card-body
                   .row
-                   
+                    .alert.alert-success
+                      strong #{ msg }
                   
                   .row
                     .col-sm-6
@@ -96,6 +97,9 @@ header.app-header.navbar
                             option(value='1') Adminstration
                             option(value='2') Registrar
                             option(value='3') School of Civil and Enviromemtal Engineering
+                            option(value='4') School of Mechanical and Industrial Engineering
+                            option(value='5') School of Chemical and Bio Engineering
+                            option(value='3') Center of ITSc
                   // TABLE PART
                   hr
                   #accordion.panel-group
@@ -103,11 +107,7 @@ header.app-header.navbar
                       .panel-heading
                         h4.panel-title
                           a(data-toggle='collapse' data-parent='#accordion' href='#collapse1') Desktops
-                          span.badge.badge-info Desktops list
-                          button.btn.btn-box-tool(type='button' data-widget='collapse')
-                            i.fa.fa-minus
-                          button.btn.btn-box-tool(type='button' data-widget='remove')
-                            i.fa.fa-times
+                          
                       #collapse1.panel-collapse.collapse.in
                         .panel-body
                           .table-responsive
@@ -118,47 +118,63 @@ header.app-header.navbar
                               thead
                                 th
                                   input#checkall(type='checkbox' name='Desktop1')
-                                th Item Name
+                                
+                                th Item No
                                 th Item description
                                 th Model
                                 th Brand
-                                th More Detail
+                                
+                                th Unit
                               tbody
+                                //- if items.length
+                                //- each  item, i in items
+
+                                //-   tr
+                                //-     td
+                                //-       input.checkthis(type='checkbox' name='Desktop2')
+                                //-     td
+                                //-       input.form-control(type='text' name='itemNo' placeholder='Quantity' disabled value=item.itemNo)
+                                  
+                                     
+                                //-     td
+                                //-       input.form-control(type='text' name='itemDesc' placeholder='Quantity' disabled value=item.itemDescription)
+                                    
+                                //-     td
+                                //-       input.form-control(type='text' name='brand' placeholder='Quantity' disabled value=item.brand)
+                                //-     td
+                                //-       input.form-control(type='text' name='model' placeholder='Quantity' disabled value=item.model)
+                                //-     td
+                                //-       input.form-control(type='text' name='process' placeholder='Quantity' disabled value=item.process)
+                                //-     td
+                                //-       input.form-control(type='text' name='unit' placeholder='Quantity' disabled value=item.unit)    
+
+                                tr
+                                  td
+                                    input.checkthis(type='checkbox' name='Desktop1')
+                                  td Desktop
+                                  td Desktop Computer with core i3 for basic Office
+                                  td 290G2
+                                  td Dell
+                                  td Pcs
+                                    
                                 tr
                                   td
                                     input.checkthis(type='checkbox' name='Desktop2')
-                                  td
-                                    script.
-                                      var name = "<%= items %>";
+                                  td Desktop
                                   td Desktop Computer with core i5 for basic Office
                                   td 290G2
                                   td HP
-                                  td
-                                    p(data-placement='top' data-toggle='tooltip' title='Edit')
-                                      button.btn.btn-primary.btn-xs(data-title='Edit' data-toggle='modal' data-target='#edit')
-                                        span.glyphicon.glyphicon-plus  More Detail
+                                  td Pcs
+                                    
                                 tr
                                   td
                                     input.checkthis(type='checkbox' name='Desktop3')
                                   td Desktop
-                                  td Desktop Computer with core i5 for basic Office
+                                  td Desktop Computer with core i7 for basic Office
                                   td 290G2
                                   td HP
-                                  td
-                                    p(data-placement='top' data-toggle='tooltip' title='Edit')
-                                      button.btn.btn-primary.btn-xs(data-title='Edit' data-toggle='modal' data-target='#edit')
-                                        span.glyphicon.glyphicon-plus  More Detail
-                                tr
-                                  td
-                                    input.checkthis(type='checkbox' name='Desktop4')
-                                  td Desktop
-                                  td Desktop Computer with core i5 for basic Office
-                                  td 290G2
-                                  td HP
-                                  td
-                                    p(data-placement='top' data-toggle='tooltip' title='Edit')
-                                      button.btn.btn-primary.btn-xs(data-title='Edit' data-toggle='modal' data-target='#edit')
-                                        span.glyphicon.glyphicon-plus  More Detail
+                                  td Pcs
+                                  
                                
                             .clearfix
                             ul.pagination
@@ -179,7 +195,7 @@ header.app-header.navbar
                     .panel.panel-default
                       .panel-heading
                         h4.panel-title
-                          a(data-toggle='collapse' data-parent='#accordion' href='#collapse2') Laptop
+                          a(data-toggle='collapse' data-parent='#accordion' href='#collapse2') Laptops
                       #collapse2.panel-collapse.collapse
                         .panel-body
                           ul.list-group
@@ -189,78 +205,39 @@ header.app-header.navbar
                             thead
                               th
                                 input#checkall(type='checkbox')
-                              th Item Name
+                              th Item No
                               th Item description
                               th Model
                               th Brand
-                              th More Detail
+                              th Unit
                             tbody
                               tr
                                 td
-                                  input.checkthis(type='checkbox')
+                                  input.checkthis(type='checkbox',name='laptop1')
                                 td Laptop
-                                td Desktop Computer with core i5 for basic Office
-                                td 290G2
+                                td Laptop Computer with core i3 for basic Office purpose
+                                td 250 G6 Notebook
                                 td HP
-                                td
-                                  p(data-placement='top' data-toggle='tooltip' title='Edit')
-                                    button.btn.btn-primary.btn-xs(data-title='Edit' data-toggle='modal' data-target='#edit')
-                                      span.glyphicon.glyphicon-plus  More Detail
+                                td Pcs
                               tr
                                 td
-                                  input.checkthis(type='checkbox')
-                                td Desktop
-                                td Desktop Computer with core i5 for basic Office
-                                td 290G2
+                                  input.checkthis(type='checkbox',name='laptop2')
+                                td Laptop
+                                td Lapatop Computer with core i5 for basic Office purpose
+                                td 250 G6 Notebook
                                 td HP
-                                td
-                                  p(data-placement='top' data-toggle='tooltip' title='Edit')
-                                    button.btn.btn-primary.btn-xs(data-title='Edit' data-toggle='modal' data-target='#edit')
-                                      span.glyphicon.glyphicon-plus  More Detail
+                                td Pcs
                               tr
                                 td
-                                  input.checkthis(type='checkbox')
-                                td Desktop
-                                td Desktop Computer with core i5 for basic Office
-                                td 290G2
+                                  input.checkthis(type='checkbox',name='laptop3')
+                                td Laptop
+                                td Laptop Computer with core i7 for basic Office
+                                td 250 G6 Notebook
                                 td HP
-                                td
-                                  p(data-placement='top' data-toggle='tooltip' title='Edit')
-                                    button.btn.btn-primary.btn-xs(data-title='Edit' data-toggle='modal' data-target='#edit')
-                                      span.glyphicon.glyphicon-plus  More Detail
-                              tr
-                                td
-                                  input.checkthis(type='checkbox')
-                                td Desktop
-                                td Desktop Computer with core i5 for basic Office
-                                td 290G2
-                                td HP
-                                td
-                                  p(data-placement='top' data-toggle='tooltip' title='Edit')
-                                    button.btn.btn-primary.btn-xs(data-title='Edit' data-toggle='modal' data-target='#edit')
-                                      span.glyphicon.glyphicon-plus  More Detail
-                              tr
-                                td
-                                  input.checkthis(type='checkbox')
-                                td Desktop
-                                td Desktop Computer with core i5 for basic Office
-                                td 290G2
-                                td HP
-                                td
-                                  p(data-placement='top' data-toggle='tooltip' title='Edit')
-                                    button.btn.btn-primary.btn-xs(data-title='Edit' data-toggle='modal' data-target='#edit')
-                                      span.glyphicon.glyphicon-plus  More Detail
-                              tr
-                                td
-                                  input.checkthis(type='checkbox')
-                                td Desktop
-                                td Desktop Computer with core i5 for basic Office
-                                td 290G2
-                                td HP
-                                td
-                                  p(data-placement='top' data-toggle='tooltip' title='Edit')
-                                    button.btn.btn-primary.btn-xs(data-title='Edit' data-toggle='modal' data-target='#edit')
-                                      span.glyphicon.glyphicon-plus  More Detail
+                                td Pcs
+                              
+                              
+                              
                           .clearfix
                           ul.pagination
                             li.page-item
@@ -275,12 +252,13 @@ header.app-header.navbar
                               a.page-link(href='#') 4
                             li.page-item
                               a.page-link(href='#') Next
+
                     // Hard Disk
                     .panel.panel-default
                       .panel-heading
                         h4.panel-title
-                          a(data-toggle='collapse' data-parent='#accordion' href='#collapse3') Hard Disk
-                      #collapse3.panel-collapse.collapse
+                          a(data-toggle='collapse' data-parent='#accordion' href='#collapse4') Hard Disks
+                      #collapse4.panel-collapse.collapse
                         .panel-body
                           .table-responsive
                             ul.list-group
@@ -294,31 +272,125 @@ header.app-header.navbar
                                 th Item description
                                 th Model
                                 th Brand
-                                th More Detail
+                                th Unit
                               tbody
                                 tr
                                   td
-                                    input.checkthis(type='checkbox')
+                                    input.checkthis(type='checkbox',name='hard1')
                                   td 1TB
                                   td 1TB external Hard Disk 
                                   td --
                                   td Toshiba
+                                  td pcs
+                                   
+                                tr
                                   td
-                                    p(data-placement='top' data-toggle='tooltip' title='Edit')
-                                      button.btn.btn-primary.btn-xs(data-title='Edit' data-toggle='modal' data-target='#edit')
-                                        span.glyphicon.glyphicon-plus
-                                          a(href='') More Detail
+                                    input.checkthis(type='checkbox',name='hard2')
+                                  td 2TB
+                                  td 2TB Extranal Hard Disk
+                                  td --
+                                  td Toshiba
+                                  td pcs
+                                   
+                    
+                    
+                    .panel.panel-default
+                      .panel-heading
+                        h4.panel-title
+                          a(data-toggle='collapse' data-parent='#accordion' href='#collapse5') CD
+                      #collapse5.panel-collapse.collapse
+                        .panel-body
+                          .table-responsive
+                            ul.list-group
+                              li.list-group-item-primary
+                                strong CD
+                            table#mytable3.table.table-responsive-sm.table-hover.table-bordered.table-striped.table-sm
+                              thead
+                                th
+                                  input#checkall(type='checkbox')
+                                th Item Name
+                                th Item description
+                                th Model
+                                th Brand
+                                th Unit
+                              tbody
+                                tr
+                                  td
+                                    input.checkthis(type='checkbox',name='cd1')
+                                  td 31
+                                  td CD-R
+                                  td --
+                                  td Ridata
+                                  td pcs
+                                    
+                                tr
+                                  td
+                                    input.checkthis(type='checkbox',name='cd2')
+                                  td 32
+                                  td CD-RAW
+                                  td --
+                                  td Ridata
+                                  td pcs
+                                   
+
+
+
+                  
+                    // Other
+                    .panel.panel-default
+                      .panel-heading
+                        h4.panel-title
+                          a(data-toggle='collapse' data-parent='#accordion' href='#collapse6') Others
+                      #collapse6.panel-collapse.collapse
+                        .panel-body
+                          .table-responsive
+                            ul.list-group
+                              li.list-group-item-primary
+                                strong Others
+                            table#mytable3.table.table-responsive-sm.table-hover.table-bordered.table-striped.table-sm
+                              thead
+                                th
+                                  input#checkall(type='checkbox')
+                                th Item Name
+                                th Item description
+                                th Model
+                                th Brand
+                                th Unit
+                              tbody
+                                tr
+                                  td
+                                    input.checkthis(type='checkbox',name='lcd1')
+                                  td LCD Project
+                                  td LCD Project
+                                  td EB-X39
+                                  td Epson
+                                  td pcs
+                                    
                                 tr
                                   td
                                     input.checkthis(type='checkbox')
-                                  td 2TB
-                                  td Desktop Computer with core i5 for basic Office
-                                  td 290G2
-                                  td HP
+                                  td 1
+                                  td Heavy Duty
+                                  td p3050DN
+                                  td KYOCERA
+                                  td pcs
+                                tr
                                   td
-                                    p(data-placement='top' data-toggle='tooltip' title='Edit')
-                                      button.btn.btn-primary.btn-xs(data-title='Edit' data-toggle='modal' data-target='#edit')
-                                        span.glyphicon.glyphicon-plus  More Detail
+                                    input.checkthis(type='checkbox')
+                                  td 2
+                                  td Monochro me Black and White
+                                  td p3050DN
+                                  td KYOCERA
+                                  td pcs
+                                tr
+                                  td
+                                    input.checkthis(type='checkbox')
+                                  td 3
+                                  td Heavy Duty Copier
+                                  td p3050DN
+                                  td KYOCERA
+                                  td pcs
+                                    
                   .checkbox
                     label
                       input(type='checkbox')

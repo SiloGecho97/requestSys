@@ -79,7 +79,7 @@ header.app-header.navbar
           a.btn(href='#')
             i.icon-settings
             |  Request Form
-    form(action='/next' method='POST')
+    form(action='/send_request' method='POST')
       .container-fluid
         .animated.fadeIn
           .row
@@ -91,6 +91,7 @@ header.app-header.navbar
                   small Form
                 .card-body
                   // TABLE PART
+
                   hr
                   #accordion.panel-group
                     .panel.panel-default
@@ -114,7 +115,8 @@ header.app-header.navbar
                             table#mytable1.table.table-responsive-sm.table-hover.table-bordered.table-striped.table-sm
                               thead
                                 
-                                th Item Name
+                                th Item No
+                               
                                 th Item Description
                                 th Item Model
                                 th Item Brand
@@ -128,7 +130,7 @@ header.app-header.navbar
                                   each  item, i in items
                                   
                                     tr
-                                      td=item.item
+                                      td=item.itemNo
                                         
                                       td=item.desc
                                       
@@ -136,9 +138,9 @@ header.app-header.navbar
                                     
                                       td=item.brand
                                       td
-                                        input.form-control(type='text' name='name0' placeholder='Quantity')
+                                        input.form-control(type='text' name='quantity' placeholder='Quantity')
                                       td
-                                        input.form-control(type='text' name='name0' placeholder='Remark')
+                                        input.form-control(type='text' name='remarks' placeholder='Remark')
                                       td
                                         p(data-placement='top' data-toggle='tooltip' title='Edit')
                                           button.btn.btn-primary.btn-xs(data-title='Edit' data-toggle='modal' data-target='#edit')
@@ -160,192 +162,14 @@ header.app-header.navbar
                                 a.page-link(href='#') Next
                     //
                       laptop
-                    .panel.panel-default
-                      .panel-heading
-                        h4.panel-title
-                          a(data-toggle='collapse' data-parent='#accordion' href='#collapse2') Laptop
-                      #collapse2.panel-collapse.collapse
-                        .panel-body
-                          ul.list-group
-                            li.list-group-item-primary
-                              strong Laptops
-                          table#mytable2.table.table-responsive-sm.table-hover.table-bordered.table-striped.table-sm
-                            thead
-                              th
-                                input#checkall(type='checkbox')
-                              th Item Name
-                              th Item description
-                              th Model
-                              th Brand
-                              th Quantity
-                              th Remark
-                              th Edit
-                              th Delete
-                            tbody
-                              tr
-                                td
-                                  input.checkthis(type='checkbox')
-                                td Laptop
-                                td Desktop Computer with core i5 for basic Office
-                                td 290G2
-                                td HP
-                                td
-                                  input.form-control(type='text' name='name0' placeholder='Quantity')
-                                td
-                                  input.form-control(type='text' name='name0' placeholder='Remark')
-                                td
-                                  p(data-placement='top' data-toggle='tooltip' title='Edit')
-                                    button.btn.btn-primary.btn-xs(data-title='Edit' data-toggle='modal' data-target='#edit')
-                                      span.glyphicon.glyphicon-plus  More Detail
-                              tr
-                                td
-                                  input.checkthis(type='checkbox')
-                                td Desktop
-                                td Desktop Computer with core i5 for basic Office
-                                td 290G2
-                                td HP
-                                td
-                                  input.form-control(type='text' name='name0' placeholder='Quantity')
-                                td
-                                  input.form-control(type='text' name='name0' placeholder='Remark')
-                                td
-                                  p(data-placement='top' data-toggle='tooltip' title='Edit')
-                                    button.btn.btn-primary.btn-xs(data-title='Edit' data-toggle='modal' data-target='#edit')
-                                      span.glyphicon.glyphicon-plus  More Detail
-                              tr
-                                td
-                                  input.checkthis(type='checkbox')
-                                td Desktop
-                                td Desktop Computer with core i5 for basic Office
-                                td 290G2
-                                td HP
-                                td
-                                  input.form-control(type='text' name='name0' placeholder='Quantity')
-                                td
-                                  input.form-control(type='text' name='name0' placeholder='Remark')
-                                td
-                                  p(data-placement='top' data-toggle='tooltip' title='Edit')
-                                    button.btn.btn-primary.btn-xs(data-title='Edit' data-toggle='modal' data-target='#edit')
-                                      span.glyphicon.glyphicon-plus  More Detail
-                              tr
-                                td
-                                  input.checkthis(type='checkbox')
-                                td Desktop
-                                td Desktop Computer with core i5 for basic Office
-                                td 290G2
-                                td HP
-                                td
-                                  input.form-control(type='text' name='name0' placeholder='Quantity')
-                                td
-                                  input.form-control(type='text' name='name0' placeholder='Remark')
-                                td
-                                  p(data-placement='top' data-toggle='tooltip' title='Edit')
-                                    button.btn.btn-primary.btn-xs(data-title='Edit' data-toggle='modal' data-target='#edit')
-                                      span.glyphicon.glyphicon-plus  More Detail
-                              tr
-                                td
-                                  input.checkthis(type='checkbox')
-                                td Desktop
-                                td Desktop Computer with core i5 for basic Office
-                                td 290G2
-                                td HP
-                                td
-                                  input.form-control(type='text' name='name0' placeholder='Quantity')
-                                td
-                                  input.form-control(type='text' name='name0' placeholder='Remark')
-                                td
-                                  p(data-placement='top' data-toggle='tooltip' title='Edit')
-                                    button.btn.btn-primary.btn-xs(data-title='Edit' data-toggle='modal' data-target='#edit')
-                                      span.glyphicon.glyphicon-plus  More Detail
-                              tr
-                                td
-                                  input.checkthis(type='checkbox')
-                                td Desktop
-                                td Desktop Computer with core i5 for basic Office
-                                td 290G2
-                                td HP
-                                td
-                                  input.form-control(type='text' name='name0' placeholder='Quantity')
-                                td
-                                  input.form-control(type='text' name='name0' placeholder='Remark')
-                                td
-                                  p(data-placement='top' data-toggle='tooltip' title='Edit')
-                                    button.btn.btn-primary.btn-xs(data-title='Edit' data-toggle='modal' data-target='#edit')
-                                      span.glyphicon.glyphicon-plus  More Detail
-                          .clearfix
-                          ul.pagination
-                            li.page-item
-                              a.page-link(href='#') Prev
-                            li.page-item.active
-                              a.page-link(href='#') 1
-                            li.page-item
-                              a.page-link(href='#') 2
-                            li.page-item
-                              a.page-link(href='#') 3
-                            li.page-item
-                              a.page-link(href='#') 4
-                            li.page-item
-                              a.page-link(href='#') Next
-                    // Hard Disk
-                    .panel.panel-default
-                      .panel-heading
-                        h4.panel-title
-                          a(data-toggle='collapse' data-parent='#accordion' href='#collapse3') Hard Disk
-                      #collapse3.panel-collapse.collapse
-                        .panel-body
-                          .table-responsive
-                            ul.list-group
-                              li.list-group-item-primary
-                                strong Hard Disk
-                            table#mytable3.table.table-responsive-sm.table-hover.table-bordered.table-striped.table-sm
-                              thead
-                                th
-                                  input#checkall(type='checkbox')
-                                th Item Name
-                                th Item description
-                                th Model
-                                th Brand
-                                th Quantity
-                                th Remark
-                                th More Detail
-                              tbody
-                                tr
-                                  td
-                                    input.checkthis(type='checkbox')
-                                  td 1TB
-                                  td 1TB external Hard Disk 
-                                  td --
-                                  td Toshiba
-                                  td
-                                    input.form-control(type='text' name='name0' placeholder='Quantity')
-                                  td
-                                    input.form-control(type='text' name='name0' placeholder='Remark')
-                                  td
-                                    p(data-placement='top' data-toggle='tooltip' title='Edit')
-                                      button.btn.btn-primary.btn-xs(data-title='Edit' data-toggle='modal' data-target='#edit')
-                                        span.glyphicon.glyphicon-plus  More Detail
-                                tr
-                                  td
-                                    input.checkthis(type='checkbox')
-                                  td 2TB
-                                  td Desktop Computer with core i5 for basic Office
-                                  td 290G2
-                                  td HP
-                                  td
-                                    input.form-control(type='text' name='name0' placeholder='Quantity')
-                                  td
-                                    input.form-control(type='text' name='name0' placeholder='Remark')
-                                  td
-                                    p(data-placement='top' data-toggle='tooltip' title='Edit')
-                                      button.btn.btn-primary.btn-xs(data-title='Edit' data-toggle='modal' data-target='#edit')
-                                        span.glyphicon.glyphicon-plus  More Detail
+                   
                   .checkbox
                     label
                       input(type='checkbox')
                       |  Review the request closely
                   div
                     .form-actions
-                      button.btn.btn-primary(type='submit') Next
+                      button.btn.btn-primary(type='submit') Submit
                       button.btn.btn-secondary(type='button') Cancel
 footer.app-footer
   div

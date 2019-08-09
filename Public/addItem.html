@@ -1,0 +1,71 @@
+
+<html>
+
+        <head>
+             
+            <!-- <script src="js/bootstrap.js"></script> -->
+            <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        
+            <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+            <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+           
+        </head>
+        
+        <body>
+                <div class="container">
+                        <label><h1>Add Items</h1></label>
+                    <div class="row">
+                        <div class="col-sm-6">
+                    
+            <form role="form" id="formfield" action="/add_items" method="POST">
+      
+                  <label>Item No.</label><input class="form-control" name="itemNo" type="text" class="form-control" id="itemNo" placeholder="Item No.">
+                </br>
+                <label>Item Description</label><input class="form-control" name="itemDescription" type="text" class="form-control" placeholder="Item Description">
+            </br>
+            <label>Process or Number</label><input class="form-control" name="process" type="text" class="form-control" placeholder="process">
+            <br>
+            <label> Brand </label> <input class="form-control" name="brand" type="text"  class="form-control" placeholder="Brand">
+                    
+        </div>
+        <div class="col-sm-6">
+                       
+                    
+                    <label>Model</label><input class="form-control" name="model" type="text" class="form-control" placeholder="Model">
+                </br>
+                <label> Unit </label> <input class="form-control" name="unit" type="text"  class="form-control" placeholder="Unit">
+                <br>
+                <label>Unit Price</label><input class="form-control" type="text" class="form-control" placeholder="Unit Price">
+                    
+                
+                  
+                 
+                   <br>
+                </div>
+            </div>
+                <button class="btn" type='submit'>sub</button> 
+              </form>
+
+          
+            </div>
+         
+        
+        
+        
+        
+         
+        
+        
+        
+        <script>
+     
+        
+        function ClearFields() {
+        
+        document.getElementById("lastName").value = "";
+        document.getElementById("firstName").value = "";
+        }
+        </script>
+        </body>
+        
+            </html>

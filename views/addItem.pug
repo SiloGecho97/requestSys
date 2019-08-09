@@ -1,0 +1,36 @@
+head
+  // <script src="js/bootstrap.js"></script>
+  link#bootstrap-css(href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css' rel='stylesheet')
+  script(src='//code.jquery.com/jquery-1.11.1.min.js')
+  script(src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js')
+.container
+  label
+    h1 Add Items
+  .row
+    .col-sm-6
+      form#formfield(role='form' action='/add_items' method='POST')
+        label Item No.
+        input#itemNo.form-control(name='itemNo' type='text' placeholder='Item No.')
+        br
+        label Item Description
+        input.form-control(name='itemDescription' type='text' placeholder='Item Description')
+        br
+        label Process or Number
+        input.form-control(name='process' type='text' placeholder='process')
+        br
+        label  Brand 
+        input.form-control(name='brand' type='text' placeholder='Brand')
+        label Model
+        input.form-control(name='model' type='text' placeholder='Model')
+        br
+        label  Unit 
+        input.form-control(name='unit' type='text' placeholder='Unit')
+        br
+        label Unit Price
+        input.form-control(type='text' placeholder='Unit Price')
+        br
+        button.btn(type='submit') sub
+script.
+  function ClearFields() {
+  document.getElementById("lastName").value = "";
+  document.getElementById("firstName").value = "";
